@@ -1,28 +1,37 @@
-//Arrays
-const exampleArray = ['football','basketball','baseball'];
 
-//To copy arrays we can use the spread operator
-
-//This operator takes all the elements of the original array and
-//copies them to the new one. The spread operator also works on
-//objects.
-
-const firstCopy = [...exampleArray];
-
-//Notice that we can check this is a copy by modifying the original
-//array.
-exampleArray[0] = "chess";
-
-console.log("This is the original array: " + exampleArray);
-console.log("This is the copied array: " + firstCopy);
-
-//Another cool operator JS has is the rest operator, let's see an example
-//This takes all of the arguments passed to the function and bundles them
-//into an array
-
-const toArray = (...args) => {
-    return args
+//Object destructuring
+const person = {
+    name: 'Kevin',
+    age: 27,
+    greet() {
+        console.log("Hello! My name is " + this.name +
+        " and I\'m " + this.age +" years old.");
+    }
 };
 
-console.log(toArray(1,2,3,4,5));
+//Let's say we have a function that takes an specific object from
+//which we want to get a single key
+const getName = (object) => {
+    console.log(object.name);
+}
+
+
+
+//We can use the object destructuring syntax to make this more general
+const getName02 = ({ name }) => {
+    console.log(name)
+}
+
+//We can also create constants or variables using destructuring
+
+let {name, age} = person;
+console.log(name,age);
+
+//It's also possible to destructure arrays by position
+
+const exampleArray = ['football','basketball','baseball'];
+
+let [firstElement] = exampleArray;
+console.log(firstElement);
+
 
