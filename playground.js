@@ -14,6 +14,13 @@ function userData(userName,userAge,userHasHobby) {
     );
 }
 
+//arrow functions
+
+//implicit return and concise body syntax
+const add = (a,b) => a+b;
+
+
 //console output
 console.log(userData('Kevin',27,true));
+console.log(add(1,2));
 
