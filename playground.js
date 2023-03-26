@@ -1,45 +1,28 @@
 //Arrays
-const exampleArray = ['football','basketball','baseball']
+const exampleArray = ['football','basketball','baseball'];
 
-//Looping:
-//The foreach loop will execute the code inside the braces for
-//every element in the array that is referenced.
+//To copy arrays we can use the spread operator
 
-console.log("FOREACH EXAMPLE: ");
+//This operator takes all the elements of the original array and
+//copies them to the new one. The spread operator also works on
+//objects.
 
-exampleArray.forEach(sport => {
-    console.log(sport)
-});
+const firstCopy = [...exampleArray];
 
-//this is the simple javascript for
+//Notice that we can check this is a copy by modifying the original
+//array.
+exampleArray[0] = "chess";
 
-console.log("FOR LOOP EXAMPLE: ");
+console.log("This is the original array: " + exampleArray);
+console.log("This is the copied array: " + firstCopy);
 
-for (let sport of exampleArray) {
-    console.log(sport);
-}
+//Another cool operator JS has is the rest operator, let's see an example
+//This takes all of the arguments passed to the function and bundles them
+//into an array
 
-
-// JavaScript objects -- We can add a loop to an object
-const person = {
-    name: 'Kevin',
-    age: 27,
-    hobbies: ["drawing","gaming","learning","playing piano"],
-    greet() {
-        console.log("Hello! My name is " + this.name +
-        " and I\'m " + this.age +" years old.");
-    },
-    showHobbies() {
-        this.hobbies.forEach(hobby => {
-            console.log(hobby)
-        });
-    }
+const toArray = (...args) => {
+    return args
 };
 
-//Executing the new method of the person object
-console.log("showHobbies method: ")
-person.showHobbies()
-
-
-
+console.log(toArray(1,2,3,4,5));
 
