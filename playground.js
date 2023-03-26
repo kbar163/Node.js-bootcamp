@@ -1,9 +1,9 @@
 //Javascript refresher. Core functionalities/features.
 
 //variable declarations
-var myName = 'Kevin';
-var myAge = 27;
-var hasHobbies = true;
+const myName = 'Kevin';
+let myAge = 27;
+let hasHobbies = true;
 
 //functions
 function userData(userName,userAge,userHasHobby) {
