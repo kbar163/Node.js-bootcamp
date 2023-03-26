@@ -1,26 +1,14 @@
-//Javascript refresher. Core functionalities/features.
+// JavaScript objects
 
-//variable declarations
-const myName = 'Kevin';
-let myAge = 27;
-let hasHobbies = true;
+const person = {
+    name: 'Kevin',
+    age: 27,
+    greet() {
+        console.log("Hello! My name is " + this.name +
+        " and I\'m " + this.age +" years old.");
+    }
+};
 
-//functions
-function userData(userName,userAge,userHasHobby) {
-    return (
-        'Name is ' + userName +
-        ', age is ' + userAge +
-        ' and the user has hobbies ' + userHasHobby
-    );
-}
+person.greet();
 
-//arrow functions
-
-//implicit return and concise body syntax
-const add = (a,b) => a+b;
-
-
-//console output
-console.log(userData('Kevin',27,true));
-console.log(add(1,2));
 
